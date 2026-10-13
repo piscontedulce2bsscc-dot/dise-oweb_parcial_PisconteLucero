@@ -1,0 +1,1438 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LÚMINA Store | Moda con estilo</title>
+    <meta name="description" content="Descubre la colección de LÚMINA Store: moda minimalista, prendas modernas y tendencias 2026.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* ===== CONFIGURACIÓN GENERAL ===== */
+        :root {
+            --beige: #e8dfd2;
+            --beige-claro: #f5f1eb;
+            --blanco: #ffffff;
+            --negro: #191816;
+            --gris: #77736d;
+            --borde: #e5dfd6;
+            --ancho: 1180px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: var(--blanco);
+            color: var(--negro);
+            line-height: 1.7;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button,
+        input,
+        textarea {
+            font: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .contenedor {
+            width: min(var(--ancho), 90%);
+            margin: auto;
+        }
+
+        .serif {
+            font-family: "Playfair Display", Georgia, serif;
+        }
+
+        .seccion {
+            padding: 100px 0;
+        }
+
+        .subtitulo {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--gris);
+            margin-bottom: 13px;
+        }
+
+        .titulo-seccion {
+            font-family: "Playfair Display", Georgia, serif;
+            font-weight: 400;
+            font-size: clamp(32px, 4vw, 46px);
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .descripcion-seccion {
+            color: var(--gris);
+            max-width: 580px;
+            margin: 0 auto;
+        }
+
+        .encabezado-seccion {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        /* ===== BARRA SUPERIOR ===== */
+        .anuncio {
+            padding: 9px 15px;
+            background: var(--negro);
+            color: white;
+            text-align: center;
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* ===== NAVEGACIÓN ===== */
+        .cabecera {
+            background: rgba(255, 255, 255, 0.97);
+            border-bottom: 1px solid var(--borde);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navegacion {
+            width: min(var(--ancho), 90%);
+            min-height: 82px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .logo {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 29px;
+            letter-spacing: 3px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            display: block;
+            font-family: "DM Sans", sans-serif;
+            font-size: 8px;
+            letter-spacing: 5px;
+            text-align: center;
+            margin-top: -5px;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .menu a {
+            font-size: 12px;
+            color: #44413d;
+            transition: opacity 0.2s;
+        }
+
+        .menu a:hover {
+            opacity: 0.55;
+        }
+
+        .icono-menu {
+            display: none;
+            border: none;
+            background: transparent;
+            font-size: 22px;
+        }
+
+        /* ===== PORTADA ===== */
+        .hero {
+            background: var(--beige-claro);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 590px;
+        }
+
+        .hero-texto {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 70px max(8%, calc((100vw - var(--ancho)) / 2));
+            padding-right: 45px;
+        }
+
+        .hero-texto .subtitulo {
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(44px, 5.4vw, 74px);
+            font-weight: 400;
+            line-height: 1.08;
+            letter-spacing: -1.5px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 em {
+            font-weight: 400;
+        }
+
+        .hero-texto > p:not(.subtitulo) {
+            color: var(--gris);
+            max-width: 410px;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+
+        .hero-imagen {
+            min-height: 590px;
+            overflow: hidden;
+            background: #ded6cb;
+        }
+
+        .hero-imagen img {
+            height: 100%;
+            min-height: 590px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .boton {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 14px 25px;
+            border: 1px solid var(--negro);
+            background: var(--negro);
+            color: white;
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.25s ease;
+        }
+
+        .boton:hover {
+            background: transparent;
+            color: var(--negro);
+        }
+
+        .boton-claro {
+            background: transparent;
+            color: var(--negro);
+        }
+
+        .boton-claro:hover {
+            background: var(--negro);
+            color: white;
+        }
+
+        /* ===== BENEFICIOS ===== */
+        .beneficios {
+            padding: 28px 0;
+            border-bottom: 1px solid var(--borde);
+        }
+
+        .beneficios-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            text-align: center;
+        }
+
+        .beneficio {
+            font-size: 12px;
+            letter-spacing: 0.3px;
+        }
+
+        .beneficio i {
+            margin-right: 8px;
+            font-size: 14px;
+        }
+
+        /* ===== PRODUCTOS ===== */
+        .productos {
+            background: white;
+        }
+
+        .filtros {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 35px;
+        }
+
+        .filtro {
+            background: transparent;
+            border: 1px solid var(--borde);
+            padding: 9px 19px;
+            font-size: 11px;
+            color: var(--gris);
+            transition: all 0.2s;
+        }
+
+        .filtro:hover,
+        .filtro.activo {
+            background: var(--negro);
+            color: white;
+            border-color: var(--negro);
+        }
+
+        .rejilla-productos {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 35px 22px;
+        }
+
+        .producto {
+            min-width: 0;
+        }
+
+        .producto-imagen {
+            position: relative;
+            overflow: hidden;
+            background: var(--beige-claro);
+        }
+
+        .producto-imagen img {
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .producto:hover .producto-imagen img {
+            transform: scale(1.035);
+        }
+
+        .etiqueta-producto {
+            position: absolute;
+            top: 13px;
+            left: 13px;
+            padding: 5px 10px;
+            background: white;
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .producto-info {
+            padding: 17px 2px 0;
+        }
+
+        .producto-info h3 {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .producto-info p {
+            font-size: 12px;
+            color: var(--gris);
+            margin-top: 3px;
+        }
+
+        .producto-pie {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-top: 13px;
+        }
+
+        .precio {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .boton-producto {
+            border: none;
+            background: transparent;
+            border-bottom: 1px solid var(--negro);
+            padding-bottom: 3px;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+        }
+
+        .boton-producto:hover {
+            opacity: 0.55;
+        }
+
+        /* ===== EDITORIAL ===== */
+        .editorial {
+            background: var(--beige-claro);
+        }
+
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 75px;
+        }
+
+        .editorial-imagen img {
+            aspect-ratio: 4 / 5;
+            max-height: 580px;
+            object-fit: cover;
+        }
+
+        .editorial-texto {
+            max-width: 470px;
+        }
+
+        .editorial-texto h2 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-weight: 400;
+            font-size: clamp(36px, 4vw, 52px);
+            line-height: 1.18;
+            margin-bottom: 23px;
+        }
+
+        .editorial-texto p {
+            color: var(--gris);
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .editorial-texto .boton {
+            margin-top: 13px;
+        }
+
+        /* ===== FRASE DESTACADA ===== */
+        .frase {
+            padding: 80px 20px;
+            text-align: center;
+            background: white;
+        }
+
+        .frase p {
+            max-width: 780px;
+            margin: auto;
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(28px, 4vw, 43px);
+            line-height: 1.35;
+        }
+
+        .frase span {
+            display: block;
+            font-family: "DM Sans", sans-serif;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--gris);
+            margin-top: 24px;
+        }
+
+        /* ===== MULTIMEDIA ===== */
+        .multimedia {
+            background: var(--beige-claro);
+        }
+
+        .video-contenedor {
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            padding: 12px;
+            border: 1px solid var(--borde);
+        }
+
+        .video-contenedor iframe,
+        .video-contenedor video {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border: 0;
+            background: #e4ddd3;
+        }
+
+        .video-nota {
+            text-align: center;
+            font-size: 12px;
+            color: var(--gris);
+            margin: 15px auto 45px;
+        }
+
+        .audio-caja {
+            max-width: 850px;
+            margin: 30px auto 0;
+            padding: 25px;
+            border: 1px solid var(--borde);
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .audio-caja h3 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 22px;
+            font-weight: 400;
+        }
+
+        .audio-caja p {
+            color: var(--gris);
+            font-size: 12px;
+        }
+
+        .audio-caja audio {
+            width: min(350px, 100%);
+        }
+
+        /* ===== CONTACTO ===== */
+        .contacto-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 75px;
+        }
+
+        .contacto-texto h2 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(36px, 4vw, 49px);
+            line-height: 1.2;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .contacto-texto p {
+            color: var(--gris);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .contacto-dato {
+            margin-top: 22px;
+            font-size: 12px;
+        }
+
+        .contacto-dato i {
+            width: 25px;
+        }
+
+        .formulario label {
+            display: block;
+            font-size: 11px;
+            margin: 17px 0 7px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .formulario input,
+        .formulario textarea {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid var(--borde);
+            background: #fff;
+            outline: none;
+            font-size: 13px;
+        }
+
+        .formulario input:focus,
+        .formulario textarea:focus {
+            border-color: var(--negro);
+        }
+
+        .formulario textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .formulario .boton {
+            width: 100%;
+            margin-top: 22px;
+        }
+
+        /* ===== PIE DE PÁGINA ===== */
+        .footer {
+            background: var(--negro);
+            color: white;
+            padding: 55px 0 25px;
+        }
+
+        .footer-principal {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 35px;
+            padding-bottom: 40px;
+        }
+
+        .footer .logo {
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .footer p {
+            color: #c7c1b8;
+            font-size: 12px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            font-size: 11px;
+            color: #e4dfd7;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .redes {
+            display: flex;
+            gap: 17px;
+            font-size: 17px;
+        }
+
+        .redes a:hover {
+            opacity: 0.65;
+        }
+
+        .footer-final {
+            border-top: 1px solid #45413b;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .footer-final p {
+            font-size: 10px;
+        }
+
+        /* ===== AVISOS ===== */
+        .aviso {
+            position: fixed;
+            z-index: 200;
+            bottom: 22px;
+            right: 22px;
+            width: min(350px, calc(100% - 44px));
+            padding: 17px 20px;
+            background: var(--negro);
+            color: white;
+            font-size: 13px;
+            display: none;
+            box-shadow: 0 8px 30px #0002;
+        }
+
+        /* ===== DISEÑO RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .navegacion {
+                min-height: 75px;
+            }
+
+            .menu {
+                gap: 15px;
+            }
+
+            .hero {
+                min-height: 500px;
+            }
+
+            .hero-imagen,
+            .hero-imagen img {
+                min-height: 500px;
+            }
+
+            .hero-texto {
+                padding: 45px 30px;
+            }
+
+            .editorial-grid {
+                gap: 35px;
+            }
+
+            .contacto-grid {
+                gap: 35px;
+            }
+        }
+
+        @media (max-width: 680px) {
+            .seccion {
+                padding: 65px 0;
+            }
+
+            .navegacion {
+                position: relative;
+                flex-wrap: wrap;
+                padding: 15px 0;
+            }
+
+            .logo {
+                font-size: 25px;
+            }
+
+            .icono-menu {
+                display: block;
+            }
+
+            .menu {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0;
+                padding: 8px 0 12px;
+            }
+
+            .menu.abierto {
+                display: flex;
+            }
+
+            .menu a {
+                width: 100%;
+                padding: 10px 0;
+                border-top: 1px solid var(--borde);
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-texto {
+                padding: 65px 7%;
+                order: 1;
+            }
+
+            .hero-imagen {
+                min-height: 340px;
+                height: 340px;
+                order: 0;
+            }
+
+            .hero-imagen img {
+                min-height: 340px;
+            }
+
+            .beneficios-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .rejilla-productos {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 28px 13px;
+            }
+
+            .producto-imagen img {
+                aspect-ratio: 3 / 4;
+            }
+
+            .producto-info h3 {
+                font-size: 12px;
+            }
+
+            .producto-info p {
+                font-size: 11px;
+            }
+
+            .producto-pie {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .editorial-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .editorial-imagen img {
+                max-height: 420px;
+            }
+
+            .audio-caja {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .audio-caja audio {
+                width: 100%;
+            }
+
+            .contacto-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .footer-principal {
+                flex-direction: column;
+            }
+
+            .footer-final {
+                flex-direction: column;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ANUNCIO -->
+    <div class="anuncio">
+        Colección 2026 · Menos, pero mejor
+    </div>
+
+    <!-- NAVEGACIÓN -->
+    <header class="cabecera">
+        <div class="navegacion">
+            <a href="#inicio" class="logo" aria-label="LÚMINA Store, inicio">
+                LÚMINA
+                <span>STORE</span>
+            </a>
+
+            <button
+                class="icono-menu"
+                id="boton-menu"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                aria-controls="menu-principal">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="menu" id="menu-principal">
+                <a href="#inicio">Inicio</a>
+                <a href="#productos">Colección</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#multimedia">Inspiración 2026</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- PORTADA PRINCIPAL -->
+        <section class="hero" id="inicio">
+            <div class="hero-texto">
+                <p class="subtitulo">Nueva colección · 2026</p>
+
+                <h1>
+                    La belleza de lo <em>esencial.</em>
+                </h1>
+
+                <p>
+                    Prendas atemporales, detalles cuidados y una forma
+                    de vestir que habla por ti. Descubre una colección
+                    pensada para acompañar tu estilo.
+                </p>
+
+                <a href="#productos" class="boton">
+                    Descubrir colección
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="hero-imagen">
+                <img
+                    src="images/real-boutique.jpg"
+                    alt="Inspiración de moda y estilo de LÚMINA Store"
+                    fetchpriority="high">
+            </div>
+        </section>
+
+        <!-- BENEFICIOS -->
+        <section class="beneficios" aria-label="Beneficios de la tienda">
+            <div class="contenedor beneficios-grid">
+                <div class="beneficio">
+                    <i class="fa-solid fa-shirt"></i>
+                    Diseños para tu día a día
+                </div>
+
+                <div class="beneficio">
+                    <i class="fa-solid fa-leaf"></i>
+                    Estilo sencillo y versátil
+                </div>
+
+                <div class="beneficio">
+                    <i class="fa-regular fa-heart"></i>
+                    Detalles que marcan la diferencia
+                </div>
+            </div>
+        </section>
+
+        <!-- COLECCIÓN DE PRODUCTOS -->
+        <section class="seccion productos" id="productos">
+            <div class="contenedor">
+
+                <div class="encabezado-seccion">
+                    <p class="subtitulo">Seleccionados para ti</p>
+                    <h2 class="titulo-seccion">La colección</h2>
+                    <p class="descripcion-seccion">
+                        Básicos modernos y accesorios que completan
+                        tu estilo con naturalidad.
+                    </p>
+                </div>
+
+                <!-- FILTROS -->
+                <div class="filtros" aria-label="Filtrar productos">
+                    <button class="filtro activo" data-filtro="todos">
+                        Todos
+                    </button>
+
+                    <button class="filtro" data-filtro="tops">
+                        Tops
+                    </button>
+
+                    <button class="filtro" data-filtro="abrigos">
+                        Abrigos
+                    </button>
+
+                    <button class="filtro" data-filtro="pantalones">
+                        Pantalones
+                    </button>
+
+                    <button class="filtro" data-filtro="accesorios">
+                        Accesorios
+                    </button>
+                </div>
+
+                <!-- PRODUCTOS -->
+                <div class="rejilla-productos">
+
+                    <article class="producto" data-categoria="tops">
+                        <div class="producto-imagen">
+                            <span class="etiqueta-producto">Esencial</span>
+                            <img
+                                src="images/real-top.jpg"
+                                alt="Top esencial de LÚMINA Store"
+                                loading="lazy">
+                        </div>
+
+                        <div class="producto-info">
+                            <h3>Top Esencial</h3>
+                            <p>Simple, versátil y contemporáneo.</p>
+
+                            <div class="producto-pie">
+                                <span class="precio">S/ 49.90</span>
+                                <button
+                                    class="boton-producto consultar"
+                                    data-producto="Top Esencial">
+                                    Consultar
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="producto" data-categoria="abrigos">
+                        <div class="producto-imagen">
+                            <span class="etiqueta-producto">Casual</span>
+                            <img
+                                src="images/real-hoodie.jpg"
+                                alt="Hoodie Urban"
+                                loading="lazy">
+                        </div>
+
+                        <div class="producto-info">
+                            <h3>Hoodie Urban</h3>
+                            <p>Comodidad con carácter propio.</p>
+
+                            <div class="producto-pie">
+                                <span class="precio">S/ 89.90</span>
+                                <button
+                                    class="boton-producto consultar"
+                                    data-producto="Hoodie Urban">
+                                    Consultar
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="producto" data-categoria="pantalones">
+                        <div class="producto-imagen">
+                            <span class="etiqueta-producto">Moderno</span>
+                            <img
+                                src="images/real-pants.jpg"
+                                alt="Pantalón Modern"
+                                loading="lazy">
+                        </div>
+
+                        <div class="producto-info">
+                            <h3>Pantalón Modern</h3>
+                            <p>Un básico para combinar.</p>
+
+                            <div class="producto-pie">
+                                <span class="precio">S/ 79.90</span>
+                                <button
+                                    class="boton-producto consultar"
+                                    data-producto="Pantalón Modern">
+                                    Consultar
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="producto" data-categoria="abrigos">
+                        <div class="producto-imagen">
+                            <span class="etiqueta-producto">Favorito</span>
+                            <img
+                                src="images/real-sweater.jpg"
+                                alt="Suéter Soft"
+                                loading="lazy">
+                        </div>
+
+                        <div class="producto-info">
+                            <h3>Suéter Soft</h3>
+                            <p>Textura y sencillez.</p>
+
+                            <div class="producto-pie">
+                                <span class="precio">S/ 69.90</span>
+                                <button
+                                    class="boton-producto consultar"
+                                    data-producto="Suéter Soft">
+                                    Consultar
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="producto" data-categoria="accesorios">
+                        <div class="producto-imagen">
+                            <span class="etiqueta-producto">Accesorio</span>
+                            <img
+                                src="images/real-bag.jpg"
+                                alt="Bolso Chic"
+                                loading="lazy">
+                        </div>
+
+                        <div class="producto-info">
+                            <h3>Bolso Chic</h3>
+                            <p>El toque final de tu look.</p>
+
+                            <div class="producto-pie">
+                                <span class="precio">S/ 59.90</span>
+                                <button
+                                    class="boton-producto consultar"
+                                    data-producto="Bolso Chic">
+                                    Consultar
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="producto" data-categoria="abrigos">
+                        <div class="producto-imagen">
+                            <span class="etiqueta-producto">Inspiración</span>
+                            <img
+                                src="images/real-boutique.jpg"
+                                alt="Inspiración visual de la boutique"
+                                loading="lazy">
+                        </div>
+
+                        <div class="producto-info">
+                            <h3>Look Inspiración</h3>
+                            <p>Ideas para nuevos conjuntos.</p>
+
+                            <div class="producto-pie">
+                                <span class="precio">Colección</span>
+                                <button
+                                    class="boton-producto consultar"
+                                    data-producto="Look Inspiración">
+                                    Consultar
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE LA MARCA -->
+        <section class="seccion editorial" id="nosotros">
+            <div class="contenedor editorial-grid">
+
+                <div class="editorial-imagen">
+                    <img
+                        src="images/real-boutique.jpg"
+                        alt="Ambiente e inspiración de LÚMINA Store"
+                        loading="lazy">
+                </div>
+
+                <div class="editorial-texto">
+                    <p class="subtitulo">Nuestra esencia</p>
+
+                    <h2>
+                        Elegancia en cada pequeño detalle.
+                    </h2>
+
+                    <p>
+                        En LÚMINA Store creemos que el estilo no necesita
+                        excesos. Una buena combinación, una silueta cuidada
+                        y los detalles adecuados pueden transformar un look.
+                    </p>
+
+                    <p>
+                        Nuestra propuesta reúne inspiración contemporánea
+                        y prendas versátiles para acompañarte en diferentes
+                        momentos de tu día.
+                    </p>
+
+                    <a href="#contacto" class="boton boton-claro">
+                        Conoce más
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FRASE DE MARCA -->
+        <section class="frase">
+            <p>
+                “El verdadero estilo está en sentirte tú,
+                sin necesidad de decir demasiado.”
+            </p>
+            <span>LÚMINA Store · Colección 2026</span>
+        </section>
+
+        <!-- VIDEOS Y AUDIO -->
+        <section class="seccion multimedia" id="multimedia">
+            <div class="contenedor">
+
+                <div class="encabezado-seccion">
+                    <p class="subtitulo">Ideas para tu próximo look</p>
+                    <h2 class="titulo-seccion">Inspiración de moda 2026</h2>
+                    <p class="descripcion-seccion">
+                        Explora nuevas ideas, combinaciones y tendencias
+                        para inspirar tu estilo.
+                    </p>
+                </div>
+
+                <!-- VIDEO DE YOUTUBE -->
+                <div class="video-contenedor">
+                    <iframe
+                        src="https://www.youtube-nocookie.com/embed/nwIQ_ghHhyg"
+                        title="Video de tendencias de moda 2026"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <p class="video-nota">
+                    Video de YouTube. Su reproducción depende de la
+                    disponibilidad y de los permisos del propietario.
+                </p>
+
+                <!-- VIDEO LOCAL -->
+                <div class="encabezado-seccion">
+                    <p class="subtitulo">Descubre nuestra propuesta</p>
+                    <h2 class="titulo-seccion">Nuestra colección en movimiento</h2>
+                    <p class="descripcion-seccion">
+                        Una presentación visual de la colección de la tienda.
+                    </p>
+                </div>
+
+                <div class="video-contenedor">
+                    <video
+                        controls
+                        preload="metadata"
+                        poster="images/real-boutique.jpg">
+                        <source
+                            src="videos/coleccion.mp4"
+                            type="video/mp4">
+                        Tu navegador no puede reproducir este video.
+                    </video>
+                </div>
+
+                <!-- AUDIO -->
+                <div class="audio-caja">
+                    <div>
+                        <h3>Un momento para ti</h3>
+                        <p>Escucha el audio mientras recorres la tienda.</p>
+                    </div>
+
+                    <audio controls preload="none">
+                        <source
+                            src="audio/ambiente.mp3"
+                            type="audio/mpeg">
+                        Tu navegador no admite la reproducción de audio.
+                    </audio>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section class="seccion" id="contacto">
+            <div class="contenedor contacto-grid">
+
+                <div class="contacto-texto">
+                    <p class="subtitulo">Estamos para ayudarte</p>
+
+                    <h2>
+                        Tu próxima prenda favorita puede estar aquí.
+                    </h2>
+
+                    <p>
+                        ¿Tienes alguna consulta sobre nuestros productos?
+                        Déjanos un mensaje y cuéntanos qué estás buscando.
+                    </p>
+
+                    <div class="contacto-dato">
+                        <i class="fa-regular fa-envelope"></i>
+                        Atención al cliente
+                    </div>
+
+                    <div class="contacto-dato">
+                        <i class="fa-regular fa-clock"></i>
+                        Consulta cuando lo necesites
+                    </div>
+                </div>
+
+                <form class="formulario" id="formulario-contacto">
+                    <label for="nombre">Nombre completo</label>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Tu nombre"
+                        autocomplete="name"
+                        required>
+
+                    <label for="correo">Correo electrónico</label>
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        placeholder="nombre@correo.com"
+                        autocomplete="email"
+                        required>
+
+                    <label for="mensaje">Mensaje</label>
+                    <textarea
+                        id="mensaje"
+                        name="mensaje"
+                        placeholder="Escribe aquí tu consulta..."
+                        required></textarea>
+
+                    <button type="submit" class="boton">
+                        Enviar consulta
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <div class="contenedor">
+
+            <div class="footer-principal">
+                <div>
+                    <a href="#inicio" class="logo">LÚMINA</a>
+                    <p>Menos excesos. Más estilo.</p>
+                </div>
+
+                <div class="footer-links">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#productos">Colección</a>
+                    <a href="#nosotros">Nosotros</a>
+                    <a href="#multimedia">Inspiración</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+
+                <div class="redes" aria-label="Redes sociales">
+                    <a
+                        href="https://www.instagram.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a
+                        href="https://www.facebook.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a
+                        href="https://www.tiktok.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-final">
+                <p>
+                    &copy; <span id="anio"></span> LÚMINA Store.
+                    Todos los derechos reservados.
+                </p>
+
+                <p>Diseñado con sencillez y estilo.</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- AVISO EN PANTALLA -->
+    <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+
+    <!-- FUNCIONES DE LA PÁGINA -->
+    <script>
+        // Año actual
+        document.getElementById("anio").textContent =
+            new Date().getFullYear();
+
+        // Menú adaptable para móviles
+        const botonMenu = document.getElementById("boton-menu");
+        const menuPrincipal = document.getElementById("menu-principal");
+
+        botonMenu.addEventListener("click", function () {
+            const abierto = menuPrincipal.classList.toggle("abierto");
+
+            botonMenu.setAttribute("aria-expanded", String(abierto));
+            botonMenu.setAttribute(
+                "aria-label",
+                abierto ? "Cerrar menú" : "Abrir menú"
+            );
+
+            botonMenu.innerHTML = abierto
+                ? '<i class="fa-solid fa-xmark"></i>'
+                : '<i class="fa-solid fa-bars"></i>';
+        });
+
+        // Cerrar el menú al seleccionar una sección
+        menuPrincipal.querySelectorAll("a").forEach(function (enlace) {
+            enlace.addEventListener("click", function () {
+                menuPrincipal.classList.remove("abierto");
+                botonMenu.setAttribute("aria-expanded", "false");
+                botonMenu.setAttribute("aria-label", "Abrir menú");
+                botonMenu.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            });
+        });
+
+        // Mensajes temporales
+        let temporizadorAviso;
+
+        function mostrarAviso(mensaje) {
+            const aviso = document.getElementById("aviso");
+
+            aviso.textContent = mensaje;
+            aviso.style.display = "block";
+
+            clearTimeout(temporizadorAviso);
+
+            temporizadorAviso = setTimeout(function () {
+                aviso.style.display = "none";
+            }, 3500);
+        }
+
+        // Filtros de productos
+        const botonesFiltro = document.querySelectorAll(".filtro");
+        const productos = document.querySelectorAll(".producto");
+
+        botonesFiltro.forEach(function (boton) {
+            boton.addEventListener("click", function () {
+                const categoriaElegida = boton.dataset.filtro;
+
+                botonesFiltro.forEach(function (otro) {
+                    otro.classList.remove("activo");
+                });
+
+                boton.classList.add("activo");
+
+                productos.forEach(function (producto) {
+                    const coincide =
+                        categoriaElegida === "todos" ||
+                        producto.dataset.categoria === categoriaElegida;
+
+                    producto.hidden = !coincide;
+                });
+            });
+        });
+
+        // Consultar un producto
+        document.querySelectorAll(".consultar").forEach(function (boton) {
+            boton.addEventListener("click", function () {
+                const nombreProducto = boton.dataset.producto;
+
+                document.getElementById("mensaje").value =
+                    "Hola, deseo consultar sobre " + nombreProducto + ".";
+
+                document.getElementById("contacto").scrollIntoView({
+                    behavior: "smooth"
+                });
+
+                document.getElementById("nombre").focus({
+                    preventScroll: true
+                });
+            });
+        });
+
+        // Validación de demostración del formulario
+        document.getElementById("formulario-contacto")
+            .addEventListener("submit", function (evento) {
+                evento.preventDefault();
+
+                mostrarAviso(
+                    "¡Gracias por tu consulta! Este formulario es una demostración; " +
+                    "todavía necesita un servicio para enviar mensajes reales."
+                );
+
+                this.reset();
+            });
+    </script>
+
+</body>
+</html>
